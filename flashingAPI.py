@@ -148,6 +148,8 @@ def run_upgrade(file_name):
         s.sendline("sysupgrade -v "+file_name)
         s.prompt()
         print("ajju =============> Flashing the hub started")
+
+        time.sleep(2)
     except pxssh.ExceptionPxssh as e:
         print("pxssh failed on login.")
         print(str(e))
